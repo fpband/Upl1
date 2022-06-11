@@ -23,11 +23,11 @@ async def OpenSettings(m: "types.Message"):
                                     #callback_data="triggerGenSample")],
         [types.InlineKeyboardButton(f"📸 گرفتن اسکرین شات : {'✅ فعال' if generate_ss else '✖️ غیرفعال'}", 
                                     callback_data="triggerGenSS")],
-        [types.InlineKeyboardButton(f"{'ᴄʜᴀɴɢᴇ' if thumbnail else '🌃 sᴇᴛ'} ᴛʜᴜᴍʙɴᴀɪʟ",
+        [types.InlineKeyboardButton(f"{'ᴄʜᴀɴɢᴇ' if thumbnail else '🌃 ثبت'} عکس تامبنیل",
                                     callback_data="setThumbnail")]
     ]
     if thumbnail:
-        buttons_markup.append([types.InlineKeyboardButton("🌆 sʜᴏᴡ ᴛʜᴜᴍʙɴᴀɪʟ",
+        buttons_markup.append([types.InlineKeyboardButton("🌆 نمایش عکس تامبنیل شما",
                                                           callback_data="showThumbnail")])
     buttons_markup.append([types.InlineKeyboardButton("𝘅 بستن 𝘅",
                                                       callback_data="close")])
