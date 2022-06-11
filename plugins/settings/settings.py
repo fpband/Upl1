@@ -17,11 +17,11 @@ async def OpenSettings(m: "types.Message"):
     #generate_sample_video = user_data.get("generate_sample_video", False)
     generate_ss = user_data.get("generate_ss", False)
     buttons_markup = [
-        [types.InlineKeyboardButton(f"ᴜᴘʟᴏᴀᴅ ᴀs {'🎥 ᴠɪᴅᴇᴏ' if upload_as_doc else '🗃️ ғɪʟᴇ'}",
+        [types.InlineKeyboardButton(f"📤 آپلود بصورت : {'🎬 ویدیو' if upload_as_doc else '📂 فایل'}",
                                     callback_data="triggerUploadMode")],
         #[types.InlineKeyboardButton(f"Generate Sample Video {'✅' if generate_sample_video else '❌'}", 
                                     #callback_data="triggerGenSample")],
-        [types.InlineKeyboardButton(f"🖼️ ʀᴇᴄᴇɪᴠᴇ sᴄʀᴇᴇɴsʜᴏᴛs {'✅' if generate_ss else '✖️'}", 
+        [types.InlineKeyboardButton(f"📸 گرفتن اسکرین شات : {'✅ فعال' if generate_ss else '✖️ غیرفعال'}", 
                                     callback_data="triggerGenSS")],
         [types.InlineKeyboardButton(f"{'ᴄʜᴀɴɢᴇ' if thumbnail else '🌃 sᴇᴛ'} ᴛʜᴜᴍʙɴᴀɪʟ",
                                     callback_data="setThumbnail")]
@@ -29,12 +29,12 @@ async def OpenSettings(m: "types.Message"):
     if thumbnail:
         buttons_markup.append([types.InlineKeyboardButton("🌆 sʜᴏᴡ ᴛʜᴜᴍʙɴᴀɪʟ",
                                                           callback_data="showThumbnail")])
-    buttons_markup.append([types.InlineKeyboardButton("♨️ ᴄʟᴏsᴇ",
+    buttons_markup.append([types.InlineKeyboardButton("𝘅 بستن 𝘅",
                                                       callback_data="close")])
 
     try:
         await m.edit(
-            text="**ʜᴇʀᴇ ʏᴏᴜ ᴄᴀɴ sᴇᴛᴜᴘ ʏᴏᴜʀ sᴇᴛᴛɪɴɢs**",
+            text="**• جهت تغییر تنظیمات کلیک کنید 👇**",
             reply_markup=types.InlineKeyboardMarkup(buttons_markup),
             disable_web_page_preview=True,
             parse_mode="Markdown"
