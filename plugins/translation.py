@@ -54,7 +54,7 @@ class Translation(object):
         InlineKeyboardButton('⁦⚙️ تنظیمات آپلود ⚡⁩', callback_data='OpenSettings')
         ],[
         InlineKeyboardButton('📚 راهنمای ربات', callback_data='help'),
-        InlineKeyboardButton('👨‍🚒 ᴀʙᴏᴜᴛ', callback_data='about')
+        InlineKeyboardButton('📌 درباره ربات', callback_data='about')
         ],[
         InlineKeyboardButton('𝘅 بستن منو 𝘅', callback_data='close')
         ]]
@@ -62,7 +62,7 @@ class Translation(object):
     HELP_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('🏡 منوی اصلی', callback_data='home'),
-        InlineKeyboardButton('👨‍🚒 ', callback_data='about')
+        InlineKeyboardButton('📌 درباره ربات', callback_data='about')
         ],[
         InlineKeyboardButton('𝘅 بستن 𝘅', callback_data='close')
         ]]
