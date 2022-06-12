@@ -28,7 +28,7 @@ class Translation(object):
  
 """
     ABOUT_TEXT = """
-🤖 **نام ربات** :** [Name-Bot](http://t.me/ir_uploadbot) •**
+🤖 **نام ربات** :** [IR-UPLOADER-BOT](https://t.me/ir_uploadbot) •**
 
 📢 **کانال پشتیبانی** :** [IR-BOTZ](https://t.me/irbotz) •**
 
@@ -42,10 +42,9 @@ class Translation(object):
 
 
     PROGRESS = """
-🔰 Sᴘᴇᴇᴅ : {3}/s\n\n
-🌀 Dᴏɴᴇ : {1}\n\n
-🎥 Tᴏᴛᴀʟ sɪᴢᴇ  : {2}\n\n
-⏳ Tɪᴍᴇ ʟᴇғᴛ : {4}\n\n
+**• ✓{1} of {2} •\n**
+**🚀 سرعت : {3}/s\n**
+**⌚ تایم اتمام آپلود : {4}\n\n**
 """
 
 
@@ -144,5 +143,5 @@ Free users only 1 request per 30 minutes.
     SLOW_URL_DECED = "Gosh that seems to be a very slow URL. Since you were screwing my home, I am in no mood to download this file. Meanwhile, why don't you try this:==> https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
     FORCE_SUBSCRIBE_TEXT = "<code>Sorry Dear You Must Join My Updates Channel for using me 😌😉....</code>"
     BANNED_USER_TEXT = "<code>You are Banned!</code>"
-    CHECK_LINK = "Pʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ ʟɪɴᴋ ⌛"
+    CHECK_LINK = "**🔄 در حال بررسی لینک ...⚡**"
 
