@@ -24,11 +24,11 @@ async def handle_force_subscribe(bot, message):
     except UserNotParticipant:
         await bot.send_message(
             chat_id=message.from_user.id,
-            text="Pʟᴇᴀsᴇ Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Mᴇ!\n\nDᴜᴇ ᴛᴏ Oᴠᴇʀʟᴏᴀᴅ, Oɴʟʏ Cʜᴀɴɴᴇʟ Sᴜʙsᴄʀɪʙᴇʀs Cᴀɴ Usᴇ Mᴇ!",
+            text=".**• برای کارکردن ربات در کانال زیر عضو شوید.**\n\n**🔚 سپس /start را کلیک کنید.😊👇👇**",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤖 Jᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 🤖", url=invite_link.invite_link)
+                        InlineKeyboardButton("🌸 عضویت 🌸", url=invite_link.invite_link)
                     ]
                 ]
             ),
@@ -39,7 +39,7 @@ async def handle_force_subscribe(bot, message):
     except Exception:
         await bot.send_message(
             chat_id=message.from_user.id,
-            text="Something Went Wrong. Contact My [Support Group](https://t.me/Tellybots_4u).",
+            text="Something Went Wrong. Contact My [Support-Admin](https://t.me/FarshidBand).",
             parse_mode="markdown",
             disable_web_page_preview=True,
             reply_to_message_id=message.message_id,
