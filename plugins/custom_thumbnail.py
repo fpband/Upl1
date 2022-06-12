@@ -1,4 +1,4 @@
-# Copyright @Tellybots | @ShriMadhavUk
+# FarshidBand
 
 import logging
 logging.basicConfig(level=logging.DEBUG,
@@ -43,7 +43,7 @@ async def photo_handler(bot: Client, event: Message):
       fsub = await handle_force_subscribe(bot, event)
       if fsub == 400:
         return
-    editable = await event.reply_text("**👀 Processing...**")
+    editable = await event.reply_text("**👀 در حال بررسی ...**")
     await db.set_thumbnail(event.from_user.id, thumbnail=event.photo.file_id)
     await editable.edit("**✅ عکس تامبنیل با موفقیت ذخیره شد.**")
 
@@ -62,7 +62,7 @@ async def delete_thumb_handler(bot: Client, event: Message):
     await event.reply_text(
          "**✅ عکس تامبنیل با موفقیت حذف شد.**",
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("⚙ ᴄᴏɴғɪɢᴜʀᴇ sᴇᴛᴛɪɴɢs 👀", callback_data="OpenSettings")]
+            [InlineKeyboardButton("تنظیم عکس تامبنیل جدید ⚡", callback_data="OpenSettings")]
         ])
     )
 
@@ -80,13 +80,13 @@ async def viewthumbnail(bot, update):
         await bot.send_photo(
         chat_id=update.chat.id,
         photo=thumbnail,
-        caption=f"ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ sᴀᴠᴇᴅ ᴛʜᴜᴍʙɴᴀɪʟ 🦠",
+        caption=f"🔚 عکس تامبنیل ذخیره شده شما 👆",
         reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("🗑️ ᴅᴇʟᴇᴛᴇ ᴛʜᴜᴍʙɴᴀɪʟ", callback_data="deleteThumbnail")]]
+                    [[InlineKeyboardButton("🗑️ حذف عکس تامبنیل", callback_data="deleteThumbnail")]]
                 ),
         reply_to_message_id=update.message_id)
     else:
-        await update.reply_text(text=f"ɴᴏ ᴛʜᴜᴍʙɴᴀɪʟ ғᴏᴜɴᴅ 🤒")
+        await update.reply_text(text=f"❌ هیچ عکس تامبنیل یافت نشد 🤒")
 
 
 async def Gthumb01(bot, update):
