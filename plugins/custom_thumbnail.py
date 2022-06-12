@@ -45,7 +45,7 @@ async def photo_handler(bot: Client, event: Message):
         return
     editable = await event.reply_text("**👀 Processing...**")
     await db.set_thumbnail(event.from_user.id, thumbnail=event.photo.file_id)
-    await editable.edit("**✅ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ sᴀᴠᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ!!**")
+    await editable.edit("**✅ عکس تامبنیل با موفقیت ذخیره شد.**")
 
 
 @Client.on_message(filters.private & filters.command(["delthumb", "deletethumbnail"]) & ~filters.edited)
@@ -60,7 +60,7 @@ async def delete_thumb_handler(bot: Client, event: Message):
 
     await db.set_thumbnail(event.from_user.id, thumbnail=None)
     await event.reply_text(
-        "**🗑️ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ᴅᴇʟᴇᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ!!**",
+         "**✅ عکس تامبنیل با موفقیت حذف شد.**",
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("⚙ ᴄᴏɴғɪɢᴜʀᴇ sᴇᴛᴛɪɴɢs 👀", callback_data="OpenSettings")]
         ])
