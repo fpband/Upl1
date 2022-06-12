@@ -23,7 +23,7 @@ async def OpenSettings(m: "types.Message"):
                                     #callback_data="triggerGenSample")],
         [types.InlineKeyboardButton(f"📸 گرفتن اسکرین شات : {'✅ فعال' if generate_ss else '✖️ غیرفعال'}", 
                                     callback_data="triggerGenSS")],
-        [types.InlineKeyboardButton(f"{'ᴄʜᴀɴɢᴇ' if thumbnail else '🌃 ثبت'} عکس تامبنیل",
+        [types.InlineKeyboardButton(f"{'ثبت' if thumbnail else '🌃 '} عکس تامبنیل",
                                     callback_data="setThumbnail")]
     ]
     if thumbnail:
