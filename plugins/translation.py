@@ -51,7 +51,7 @@ class Translation(object):
 
     START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('⁦⚙️ تنظیمات آپلود ⚡⁩', callback_data='OpenSettings')
+        InlineKeyboardButton('تنظیمات آپلود ⚡⚙️', callback_data='OpenSettings')
         ],[
         InlineKeyboardButton('📚 راهنمای ربات', callback_data='help'),
         InlineKeyboardButton('📌 درباره ربات', callback_data='about')
