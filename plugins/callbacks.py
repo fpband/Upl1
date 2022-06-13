@@ -44,9 +44,9 @@ async def button(bot, update):
             await update.answer("You didn't set any custom thumbnail!", show_alert=True)
         else:
             await update.answer()
-            await bot.send_photo(update.message.chat.id, thumbnail, "Custom Thumbnail",
+            await bot.send_photo(update.message.chat.id, thumbnail, "📌 عکس تامبنیل ذخیره شده ی شما ",
                                reply_markup=types.InlineKeyboardMarkup([[
-                                   types.InlineKeyboardButton("Delete Thumbnail",
+                                   types.InlineKeyboardButton("❌ حذف عکس تامبنیل",
                                                               callback_data="deleteThumbnail")
                                ]]))
     elif update.data == "deleteThumbnail":
