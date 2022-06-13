@@ -51,7 +51,7 @@ async def button(bot, update):
                                ]]))
     elif update.data == "deleteThumbnail":
         await db.set_thumbnail(update.from_user.id, None)
-        await update.answer("Okay, I deleted your custom thumbnail. Now I will apply default thumbnail.", show_alert=True)
+        await update.answer("عکس تامبنیل با موفقیت حذف شد.", show_alert=True)
         await update.message.delete(True)
     elif update.data == "setThumbnail":
         await update.message.edit_text(
