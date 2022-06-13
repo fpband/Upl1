@@ -27,7 +27,7 @@ async def status_handler(_, m: Message):
              f"**Free Space:** {free} \n"
              f"**CPU Usage:** {cpu_usage}% \n"
              f"**RAM Usage:** {ram_usage}%\n\n"
-             f"**Total Users in DB:** `{total_users}`",
+             f"**تعداد کاربرای ربات :** `{total_users}`",
         parse_mode="Markdown",
         quote=True
     )
